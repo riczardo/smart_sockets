@@ -12,8 +12,8 @@ import sys
 # Set SENDER to mqtt in order to use MQTT protocol
 # or set it to http to use HTTP protocol
 
-# SENDER = 'mqtt'
-SENDER = 'http'
+SENDER = 'mqtt'
+# SENDER = 'http'
 
 # MASTER_RB_IP='192.168.30.12'
 MASTER_RB_IP=None
