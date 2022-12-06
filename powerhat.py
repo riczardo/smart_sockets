@@ -158,9 +158,9 @@ if __name__ == '__main__':
 
 
     if SENDER == 'http':
-        httpSender = HttpSender()
+        httpSender = HttpSender(MASTER_RB_IP)
     else:
-        mqttSender = MqttSender()
+        mqttSender = MqttSender(MASTER_RB_IP)
         mqttSender.connect()
 
     i2c_bus = board.I2C()
