@@ -78,7 +78,6 @@ class MqttReceiver:
 
 if __name__ == '__main__':
     def onReceiveJsonFunction(jsonData):
-        print(jsonData)
         client = InfluxDBClient('localhost', "8086", 'backend', 'backend', 'mydb')
         list_of_data = []
         for key in jsonData.keys():
@@ -95,7 +94,7 @@ if __name__ == '__main__':
             }
             list_of_data.append(sample)
         client.write_points(list_of_data)
-        print("poszlo")
+        
         
     
     mqttReceiver = MqttReceiver()
